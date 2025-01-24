@@ -11,7 +11,9 @@ export default function HomePage() {
     <View style={styles.container}>
         <Text>Welcome to my App!</Text>
 
-        <TouchableOpacity style={styles.button} onPress={() => Alert.alert("PRESSED!")}><Text>Click me</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => Alert.alert("PRESSED!")}>
+            <Text style={styles.alertText}>Click me</Text>
+        </TouchableOpacity>
 
         <FruitList />
     </View>
@@ -36,12 +38,12 @@ const styles = StyleSheet.create({
     },
     alertText:{
       fontSize: 15,
-      color: 'red',
+      color: 'yellow',
       padding: 10,
     },
     button: {
         backgroundColor: 'red',
-        padding: 20,
+        padding: 10,
         borderRadius: 5,
     }
   });
