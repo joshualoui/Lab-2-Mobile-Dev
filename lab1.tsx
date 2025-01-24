@@ -1,7 +1,6 @@
 
 import { StatusBar } from 'expo-status-bar';
 import { Alert, StyleSheet, Text, View } from 'react-native';
-import vacation_location, {vacation_price} from './app/vacations';
 import { TouchableOpacity } from 'react-native';
 
 import React, { useState } from "react";
