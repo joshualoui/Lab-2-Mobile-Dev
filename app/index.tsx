@@ -1,3 +1,4 @@
+
 import { StatusBar } from 'expo-status-bar';
 import { Alert, StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native';
@@ -47,3 +48,4 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     }
   });
+
