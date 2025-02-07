@@ -13,8 +13,15 @@ const Increment: React.FC<CountUpProps> = ({ value, setValue }) => {
 
   return (
     <View>
-      <TouchableOpacity onPress={increment}>
-        <Text>Increment +</Text>
+      <TouchableOpacity
+        onPress={increment}
+        style={{
+          backgroundColor: "green",
+          padding: 15,
+          borderRadius: 5,
+        }}
+      >
+        <Text style={{ color: "white" }}>Increment +</Text>
       </TouchableOpacity>
     </View>
   );
