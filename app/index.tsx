@@ -1,12 +1,20 @@
-
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View } from 'react-native';
+import { View, Text, StyleSheet, Button, TextInput, Alert } from "react-native";
 import { TouchableOpacity } from 'react-native';
 import React, { useState } from "react";
+import { Link, router, useRouter } from "expo-router";
 import FruitList from '../components/fruitList';
 
 
 export default function HomePage() {
+
+  //define useRouter first
+  const router = useRouter();
+
+  //to router.Push as a function
+  const routeToLab3 = () => {
+    router.push("/lab_3");
+  }
 
   return (
     <View style={styles.container}>
@@ -17,6 +25,8 @@ export default function HomePage() {
         </TouchableOpacity>
 
         <FruitList />
+
+        <Button title="Lab 3" onPress={routeToLab3}/>
     </View>
   );
 }
