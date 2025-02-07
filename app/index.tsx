@@ -24,7 +24,7 @@ export default function HomePage() {
     <View style={styles.container}>
       <Text>Welcome to my App!</Text>
 
-      {/* <TouchableOpacity style={styles.button} onPress={() => Alert.alert("PRESSED!")}>
+      <TouchableOpacity style={styles.button} onPress={() => Alert.alert("PRESSED!")}>
             <Text style={styles.alertText}>Click me</Text>
         </TouchableOpacity>
 
