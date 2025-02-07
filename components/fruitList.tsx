@@ -9,13 +9,28 @@ export function FruitList() {
 
 
   return (
-    <View>
-        <Text>Fruits List:</Text>
+    <View style={styles.fruitsListContainer}>
+        <Text style={styles.fruitsTitle}>Fruits List:</Text>
 
             {fruits.map((fruit, index) => 
-            <Text key={index}>{fruit}</Text>)}
+            <Text style={styles.fruitsText} key={index}>{fruit}</Text>)}
     </View>
   );
 }
 
 export default FruitList;
+
+const styles = StyleSheet.create({ 
+  fruitsListContainer: {
+    padding: 15,
+  },
+  fruitsText:{
+    fontSize: 20,
+    color: 'black',
+  },
+  fruitsTitle: {
+    fontSize: 20,
+    color: 'black',
+    fontWeight: 'bold',
+  }
+});

@@ -1,15 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import React, { useState } from "react";
-import { Link, router, useRouter } from "expo-router";
-// import { DecrementButton } from '../components/DecrementButton';
-// import { IncrementButton } from '../components/IncrementButton';
+import Increment from '../components/increment';
+import Decrement from '../components/decrement';
 
 
 export default function Lab3() {
 
-    const [value, setValue] = useState<number>(0); 
+    const [count, setCount] = useState<number>(0); 
 
   return (
     <View style={styles.container}>
@@ -18,10 +15,10 @@ export default function Lab3() {
         </View>
 
         <View>
-            <Text style={styles.text}>Value: {value}</Text>
+            <Text style={styles.text}>Value: {count}</Text>
             <View>
-                {/* <IncrementButton value={value} setValue={setValue}/>
-                <DecrementButton value={value} setValue={setValue}/> */}
+                <Increment value={count} setValue={setCount}/>
+                <Decrement count={count} setCount={setCount}/>
             </View>
         </View>
     </View>

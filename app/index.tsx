@@ -22,7 +22,7 @@ export default function HomePage() {
 
   return (
     <View style={styles.container}>
-      <Text>Welcome to my App!</Text>
+      <Text style={styles.title}>Welcome to my App!</Text>
 
       <TouchableOpacity style={styles.button} onPress={() => Alert.alert("PRESSED!")}>
             <Text style={styles.alertText}>Click me</Text>
@@ -44,8 +44,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
-    fontSize: 50,
+    fontSize: 32,
     fontWeight: "bold",
+    marginBottom: 40,
   },
   text: {
     fontSize: 15,
