@@ -6,10 +6,6 @@ import React, { useState } from "react";
 import { Link, router, useRouter } from "expo-router";
 import FruitList from '../components/fruitList';
 
-import CountUp from "../components/increment";
-import Increment from "../components/increment";
-import Lab3 from "./lab3";
-
 export default function HomePage() {
 
   //define useRouter first
@@ -18,6 +14,10 @@ export default function HomePage() {
   //to router.Push as a function
   const routeToLab3 = () => {
     router.push("/lab_3");
+  }
+
+  const routeToLab4 = () => {
+    router.push("/lab4");
   }
 
   return (
@@ -30,7 +30,11 @@ export default function HomePage() {
 
         <FruitList />
 
+      <View style={styles.buttonView}>
         <Button title="Lab 3" onPress={routeToLab3}/>
+
+        <Button title="Lab 4" onPress={routeToLab4}/>
+      </View>
 
     </View>
   );
@@ -62,5 +66,11 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     padding: 10,
     borderRadius: 5,
+  },
+  buttonView: {
+    flexDirection: "row",
+    backgroundColor: "lightgray",
+    padding: 6,
+    borderRadius: 8,
   },
 });
