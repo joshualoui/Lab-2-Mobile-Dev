@@ -11,19 +11,19 @@ export default function Lab4() {
     //const to know whether the checkbox is checked or not
     const [checked, setChecked] = useState<number>(1); 
 
-    // const handleCheckBox = () => 
-    // {
-    //     if (checked == false)
-    //     {
-    //         <Text style={styles.box}></Text>
-    //         setChecked(false);
-    //     }
-    //     else if (checked == true)
-    //     {
-    //         <Text>{"\u2705"}</Text>
-    //         setChecked(true);
-    //     }
-    // }
+    const handleCheckBox = () => 
+    {
+        if (checked == false)
+        {
+            <Text style={styles.box}></Text>
+            setChecked(false);
+        }
+        else if (checked == true)
+        {
+            <Text>{"\u2705"}</Text>
+            setChecked(true);
+        }
+    }
 
     return (
         <View style={styles.container}>
