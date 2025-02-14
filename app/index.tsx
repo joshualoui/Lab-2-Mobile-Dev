@@ -1,10 +1,13 @@
-
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, StyleSheet, Button, TextInput, Alert } from "react-native";
 import { TouchableOpacity } from 'react-native';
 import React, { useState } from "react";
 import { Link, router, useRouter } from "expo-router";
 import FruitList from '../components/fruitList';
+
+import CountUp from "../components/increment";
+import Increment from "../components/increment";
+import Lab3 from "./lab3";
 
 export default function HomePage() {
 
@@ -16,6 +19,7 @@ export default function HomePage() {
     router.push("/lab_3");
   }
 
+  //to router.Push as a function for Lab 4
   const routeToLab4 = () => {
     router.push("/lab4");
   }
@@ -30,11 +34,8 @@ export default function HomePage() {
 
         <FruitList />
 
-      <View style={styles.buttonView}>
         <Button title="Lab 3" onPress={routeToLab3}/>
-
         <Button title="Lab 4" onPress={routeToLab4}/>
-      </View>
 
     </View>
   );
@@ -66,11 +67,5 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     padding: 10,
     borderRadius: 5,
-  },
-  buttonView: {
-    flexDirection: "row",
-    backgroundColor: "lightgray",
-    padding: 6,
-    borderRadius: 8,
   },
 });
