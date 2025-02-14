@@ -1,4 +1,3 @@
-
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, StyleSheet, Button, TextInput, Alert } from "react-native";
 import { TouchableOpacity } from 'react-native';
@@ -20,6 +19,11 @@ export default function HomePage() {
     router.push("/lab_3");
   }
 
+  //to router.Push as a function for Lab 4
+  const routeToLab4 = () => {
+    router.push("/lab4");
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to my App!</Text>
@@ -31,6 +35,7 @@ export default function HomePage() {
         <FruitList />
 
         <Button title="Lab 3" onPress={routeToLab3}/>
+        <Button title="Lab 4" onPress={routeToLab4}/>
 
     </View>
   );
