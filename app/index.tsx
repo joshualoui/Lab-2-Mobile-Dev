@@ -7,7 +7,7 @@ import FruitList from '../components/fruitList';
 
 import CountUp from "../components/increment";
 import Increment from "../components/increment";
-import Lab3 from "./lab3";
+import Lab3 from "./lab_3";
 
 export default function HomePage() {
 
@@ -24,6 +24,10 @@ export default function HomePage() {
     router.push("/lab4");
   }
 
+  const routeToLab5 = () => {
+    router.push("/lab5");
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to my App!</Text>
@@ -36,6 +40,7 @@ export default function HomePage() {
 
         <Button title="Lab 3" onPress={routeToLab3}/>
         <Button title="Lab 4" onPress={routeToLab4}/>
+        <Button title="Lab 5" onPress={routeToLab5}/>
 
     </View>
   );
