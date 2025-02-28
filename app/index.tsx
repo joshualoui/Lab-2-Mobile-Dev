@@ -30,13 +30,13 @@ export default function HomePage() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to my App!</Text>
+      <Text style={styles.title}>Mobile Development Labs!</Text>
 
-      <TouchableOpacity style={styles.button} onPress={() => Alert.alert("PRESSED!")}>
+      {/* <TouchableOpacity style={styles.button} onPress={() => Alert.alert("PRESSED!")}>
             <Text style={styles.alertText}>Click me</Text>
         </TouchableOpacity>
 
-        <FruitList />
+        <FruitList /> */}
 
         <Button title="Lab 3" onPress={routeToLab3}/>
         <Button title="Lab 4" onPress={routeToLab4}/>
@@ -54,9 +54,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
-    fontSize: 32,
+    fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 40,
+    marginBottom: 30,
   },
   text: {
     fontSize: 15,
