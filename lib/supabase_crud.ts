@@ -1,6 +1,6 @@
 import supabase from "./supabase";
 
-const TABLE_NAME = "users";
+const TABLE_NAME = "sampledatabase";
 
 export async function getUsers() {
 
