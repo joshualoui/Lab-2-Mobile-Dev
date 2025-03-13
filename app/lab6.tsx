@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 const CallAPI = () => {
     // const [data, setData] = useState<any|null>(null);
 
-    const [data, setData] = useState<any[]>([]);
+    const [data, setData] = useState<any>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,30 +27,16 @@ const CallAPI = () => {
 
     return (
         <View>
-            <Text>Hello there</Text>
+            <Text>People Data</Text>
 
-            <View>
-                {data ? (
-                    <>
-                        <Text>{data.id}</Text>
-                        <Text>{data.name}</Text>
-                        <Text>{data.email}</Text>
-                        <Text>{data.phone}</Text>
-                    </>
-                ) : (
-                    <Text>loading...</Text>
-                )}
-            </View>
-
-r
-            {/* {data && data.map((d: any) => (
+            {data.map((d: any) => (
                 <View key={d.id.toString()} style={{}}>
-                    <Text>{d.id}</Text>
-                    <Text>{d.name}</Text>
-                    <Text>{d.email}</Text>
-                    <Text>{d.phone}</Text>
+                    <Text>ID: {d.id}</Text>
+                    <Text>Name: {d.name}</Text>
+                    <Text>Email: {d.email}</Text>
+                    <Text>Phone: {d.phone}</Text>
                 </View>
-            ))} */}
+            ))}
         </View>
 
         )
