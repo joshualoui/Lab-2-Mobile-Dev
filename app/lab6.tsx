@@ -27,16 +27,18 @@ const CallAPI = () => {
 
     return (
         <View>
-            <Text>People Data</Text>
+            <Text style={{ fontWeight:"bold"}}>People Data</Text>
 
-            {data.map((d: any) => (
-                <View key={d.id.toString()} style={{}}>
-                    <Text>ID: {d.id}</Text>
-                    <Text>Name: {d.name}</Text>
-                    <Text>Email: {d.email}</Text>
-                    <Text>Phone: {d.phone}</Text>
-                </View>
-            ))}
+            <View>
+                {data.map((d: any) => (
+                    <View key={d.id.toString()} style={{ padding: 5 }}>
+                        <Text>ID: {d.id}</Text>
+                        <Text>Name: {d.name}</Text>
+                        <Text>Email: {d.email}</Text>
+                        <Text>Phone: {d.phone}</Text>
+                    </View>
+                ))}
+            </View>
         </View>
 
         )
